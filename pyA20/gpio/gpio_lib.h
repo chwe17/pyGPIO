@@ -19,6 +19,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
+ *
+ * by chow add: author :duxingkei chow email :277563381@qq.com https://github.com/duxingkei33/orangepi_PC_gpio_pyH3
+ *
  */
 
 #ifndef _GPIO_LIB_H_
@@ -34,8 +37,16 @@
 #define SUNXI_GPIO_E	4
 #define SUNXI_GPIO_F	5
 #define SUNXI_GPIO_G	6
+//by chow  add 
 #define SUNXI_GPIO_H	7
-#define SUNXI_GPIO_I	8
+#define SUNXI_GPIO_I		8
+#define SUNXI_GPIO_J	9
+#define SUNXI_GPIO_K	10
+#define SUNXI_GPIO_L	11
+#define SUNXI_GPIO_M	12
+#define SUNXI_GPIO_N	13
+#define SUNXI_GPIO_O	14
+
 
 struct sunxi_gpio {
     unsigned int cfg[4];
@@ -75,8 +86,17 @@ struct sunxi_gpio_reg {
 #define SUNXI_GPIO_E_NR		(32)
 #define SUNXI_GPIO_F_NR		(32)
 #define SUNXI_GPIO_G_NR		(32)
+//BY CHOW add
 #define SUNXI_GPIO_H_NR		(32)
 #define SUNXI_GPIO_I_NR		(32)
+#define SUNXI_GPIO_J_NR		(32)
+#define SUNXI_GPIO_K_NR		(32)
+#define SUNXI_GPIO_L_NR		(32)
+#define SUNXI_GPIO_M_NR		(32)
+#define SUNXI_GPIO_N_NR		(32)
+#define SUNXI_GPIO_O_NR		(32)
+//
+
 
 #define SUNXI_GPIO_NEXT(__gpio) ((__gpio##_START)+(__gpio##_NR)+0)
 
@@ -88,8 +108,17 @@ enum sunxi_gpio_number {
     SUNXI_GPIO_E_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_D), //128
     SUNXI_GPIO_F_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_E), //160
     SUNXI_GPIO_G_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_F), //192
+// BY CHOW  ADD
     SUNXI_GPIO_H_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_G), //224	
-    SUNXI_GPIO_I_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_H) //256
+    SUNXI_GPIO_I_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_H), //256
+   SUNXI_GPIO_J_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_I), //288	
+    SUNXI_GPIO_K_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_J), //320
+    SUNXI_GPIO_L_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_K), //352
+    SUNXI_GPIO_M_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_L), //384
+    SUNXI_GPIO_N_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_M), //448
+    SUNXI_GPIO_O_START = SUNXI_GPIO_NEXT(SUNXI_GPIO_N), //448+32
+
+
 };
 
 /* SUNXI GPIO number definitions */
@@ -102,6 +131,15 @@ enum sunxi_gpio_number {
 #define SUNXI_GPG(_nr) (SUNXI_GPIO_G_START + (_nr))
 #define SUNXI_GPH(_nr) (SUNXI_GPIO_H_START + (_nr))
 #define SUNXI_GPI(_nr) (SUNXI_GPIO_I_START + (_nr))
+//add by chow
+#define SUNXI_GPJ(_nr) (SUNXI_GPIO_J_START + (_nr))
+#define SUNXI_GPK(_nr) (SUNXI_GPIO_K_START + (_nr))
+#define SUNXI_GPL(_nr) (SUNXI_GPIO_L_START + (_nr))
+#define SUNXI_GPM(_nr) (SUNXI_GPIO_M_START + (_nr))
+#define SUNXI_GPN(_nr) (SUNXI_GPIO_N_START + (_nr))
+#define SUNXI_GPO(_nr) (SUNXI_GPIO_O_START + (_nr))
+
+
 
 /* GPIO pin function config */
 #define SUNXI_GPIO_INPUT (0)
