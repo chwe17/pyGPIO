@@ -6,7 +6,7 @@ import sys, shutil
 
 # Tested processor types & boards
 supported_processors = ["sun7i", "sun8i"]
-supported_boards = ["orangepiero", "orangepipcplus", "micro", "lime2", "lime", "nanopiduo"]
+supported_boards = ["orangepizero", "orangepipcplus", "micro", "lime2", "lime", "nanopiduo"]
 
 try:
 	input = raw_input
