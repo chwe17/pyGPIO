@@ -1,4 +1,4 @@
-Do not use this Libary at he moment! Under development.
+Do not use this Lib at he moment! Under development.
 
 This package provide methods for controlling GPIO pins, I2C and SPI buses.
 This is written for A20-OLinuXino-MICRO, but it can be used with other boards. If you do
