@@ -19,6 +19,9 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
  * MA 02110-1301, USA.
+ *
+ * mapping.h from: https://github.com/wdmomoxx/orangepi_ZERO_gpio_pyH2
+ *
  */
 
 #ifndef __MAPPING_H
@@ -45,58 +48,25 @@ gpio_t gpio[] = {
 
     /*
     #define PIN_PG0		SUNXI_GPG(0)
-
 */  {"gpio1",
         {
-            {   "PA12",  SUNXI_GPA(12),  3   },
-            {   "PA11",  SUNXI_GPA(11),  5   },
+            {   "PA0",  SUNXI_GPA(0),  13   },
+            {   "PA1",  SUNXI_GPA(1),  11   },
+            {   "PA2",  SUNXI_GPA(2),  22   },
+            {   "PA3",  SUNXI_GPA(3),  15   },
             {   "PA6",  SUNXI_GPA(6),  7   },
- /*
- thanks  nopnop2002 
- /orangepi_PC_gpio_pyH3/pyA20/gpio/mapping.h
-
-It is a mistake.
-{ "PA0", SUNXI_GPA(0), 11 },
-{ "PA1", SUNXI_GPA(1), 13 },
-
-It is right.
-{ "PA1", SUNXI_GPA(1), 11 },
-{ "PA0", SUNXI_GPA(0), 13 },
-
-sorry My poor English
-
-
-            {   "PA0",  SUNXI_GPA(0),   11 },
-            {   "PA1",  SUNXI_GPA(1),   13   },
-            
- */           
-            {   "PA1",  SUNXI_GPA(1),   11 },
-            {   "PA0",  SUNXI_GPA(0),   13   },
-
-            {   "PA3",  SUNXI_GPA(3),   15   },
-            {   "PC0",  SUNXI_GPC(0),   19   },           
-	    {   "PC1",  SUNXI_GPC(1),  21   },
-            {   "PC2",  SUNXI_GPC(2),  23   },
-            {   "PA19",  SUNXI_GPA(19),  27   },
-            {   "PA7",  SUNXI_GPA(7),   29 },
-            {   "PA8",  SUNXI_GPA(8),   31   },
-            {   "PA9",  SUNXI_GPA(9),   33   },
-            {   "PA10",  SUNXI_GPA(10),   35   },
-            {   "PA20",  SUNXI_GPA(20),  37  },
-//
-            {   "PA13",  SUNXI_GPA(13),  8   },
-            {   "PA14",  SUNXI_GPA(14),  10  },
-            {   "PD14",  SUNXI_GPD(14),   12 },
-            {   "PC4",  SUNXI_GPC(4),   16   },
-            {   "PC7",  SUNXI_GPC(7),   18   },
-            {   "PA2",  SUNXI_GPA(2),   22   },
-            {   "PC3",  SUNXI_GPC(3),  24   },
-            {   "PA21",  SUNXI_GPA(21),  26   },
-            {   "PA18",  SUNXI_GPA(18),  28  },
-            {   "PG8",  SUNXI_GPG(8),   32 },
-            {   "PG9",  SUNXI_GPG(9),   36   },
-            {   "PG6",  SUNXI_GPG(6),   38   },
-            {   "PG7",  SUNXI_GPG(7),   40   },
+            {   "PA7",  SUNXI_GPA(7),  12   },
+            {   "PA10",  SUNXI_GPA(10),  26  },
+            {   "PA11",  SUNXI_GPA(11),  5  },
+            {   "PA12",  SUNXI_GPA(12),  3  },
+            {   "PA13",  SUNXI_GPA(13),  24  },	
+            {   "PA14",  SUNXI_GPA(14),  23  },
+            {   "PA15",  SUNXI_GPA(15),  19  },
+            {   "PA16",  SUNXI_GPA(16),  21  },
+            {   "PA18",  SUNXI_GPA(18),  18  },
+            {   "PA19",  SUNXI_GPA(19),  16  },
+            {   "PG6",  SUNXI_GPG(6),  8   },
+            {   "PG7",  SUNXI_GPG(7),  10   },
             {
                 {   0,  0,  0}
             },
@@ -104,11 +74,10 @@ sorry My poor English
     },
   /*
     #define PIN_PG0		SUNXI_GPG(0)
-
 */  {"LED",
         {
             {   "POWER_LED",  SUNXI_GPL(10),  1   },
-            {   "STATUS_LED",  SUNXI_GPA(15),  2   },
+            {   "STATUS_LED",  SUNXI_GPA(17),  2   },
             {
                 {   0,  0,  0}
             },
