@@ -57,7 +57,7 @@ pin header (26pin 'model A') looks like the following:
 								GND		|··|	GPIO15	(PG7, UART1_RX)
 (PA1, UART2_RX)					GPIO17	|··|	GPIO18	(PA7)
 (PA0, UART2_TX)					GPIO27	|··|	GND
-(PA2, UART2_CTS)				GPIO22	|··|	GPIO23	(PA19, TWI1_SDA)
+(PA3, UART2_CTS)				GPIO22	|··|	GPIO23	(PA19, TWI1_SDA)
 								3.3V	|··|	GPIO24	(PA18, TWI1 SCK)
 (PA15, SPI1_MOSI, UART3_RTS)	GPIO10	|··|	GND
 (PA16, SPI1_MISO, UART3_CTS)	GPIO9	|··|	GPIO25	(PA2, UART2_RTS)
@@ -73,7 +73,7 @@ pin header (26pin 'model A') looks like the following:
 			{   "PA6",  SUNXI_GPA(),6  4   },
 			{   "PA1",  SUNXI_GPA(1),  17   },
 			{   "PA0",  SUNXI_GPA(0),  27   },
-			{   "PA2",  SUNXI_GPA(2),  22   },
+			{   "PA3",  SUNXI_GPA(3),  22   },
 			{   "PA15",  SUNXI_GPA(15),  10  },
 			{   "PA16",  SUNXI_GPA(16),  9  },
 			{   "PA14",  SUNXI_GPA(14),  11  },

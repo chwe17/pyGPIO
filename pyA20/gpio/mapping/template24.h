@@ -98,7 +98,7 @@ replace XZ with the pin which is wired out on this position (e.g. PA10, PG11 etc
 	{"LED",
 		{
 			{   "POWER_LED",  SUNXI_GPL(10),  1   },
-			{   "STATUS_LED",  SUNXI_GPA(17),  2   },
+			{   "STATUS_LED",  SUNXI_GPA(17),  2  },
 			{
 				{   0,  0,  0}
 			},
