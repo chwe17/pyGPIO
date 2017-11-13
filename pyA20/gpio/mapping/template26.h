@@ -69,24 +69,24 @@ replace XZ with the pin which is wired out on this position (e.g. PA10, PG11 etc
 	{"GPIO",
 		{
 			//'first row'
-			{   "PXZ",  SUNXI_GPX(Z),  2   },
-			{   "PXZ",  SUNXI_GPX(Z),  3   },
-			{   "PXZ",  SUNXI_GPX(Z),  4   },
-			{   "PXZ",  SUNXI_GPX(Z),  17   },
-			{   "PXZ",  SUNXI_GPX(Z),  27   },
-			{   "PXZ",  SUNXI_GPX(Z),  22   },
-			{   "PXZ",  SUNXI_GPX(Z),  10  },
-			{   "PXZ",  SUNXI_GPX(Z),  9  },
-			{   "PXZ",  SUNXI_GPX(Z),  11  },
+			{   "GPIO2",  SUNXI_GPX(Z),  3   },
+			{   "GPIO3",  SUNXI_GPX(Z),  5   },
+			{   "GPIO4",  SUNXI_GPX(Z),  7   },
+			{   "GPIO17",  SUNXI_GPX(Z),  11   },
+			{   "GPIO27",  SUNXI_GPX(Z),  13   },
+			{   "GPIO22",  SUNXI_GPX(Z),  15   },
+			{   "GPIO10",  SUNXI_GPX(Z),  19  },
+			{   "GPIO9",  SUNXI_GPX(Z),  21  },
+			{   "GPIO11",  SUNXI_GPX(Z),  23  },
 			//'second row'
-			{   "PXZ",  SUNXI_GPX(Z),  14  },	
-			{   "PXZ",  SUNXI_GPX(Z),  15  },
-			{   "PXZ",  SUNXI_GPX(Z),  18  },
-			{   "PXZ",  SUNXI_GPX(Z),  23  },
-			{   "PXZ",  SUNXI_GPX(Z),  24  },
-			{   "PXZ",  SUNXI_GPX(Z),  25  },
-			{   "PXZ",  SUNXI_GPX(Z),  8   },
-			{   "PXZ",  SUNXI_GPX(Z),  7   },
+			{   "GPIO14",  SUNXI_GPX(Z),  8  },	
+			{   "GPIO15",  SUNXI_GPX(Z),  10  },
+			{   "GPIO18",  SUNXI_GPX(Z),  12  },
+			{   "GPIO23",  SUNXI_GPX(Z),  16  },
+			{   "GPIO24",  SUNXI_GPX(Z),  18  },
+			{   "GPIO25",  SUNXI_GPX(Z),  22  },
+			{   "GPIO8",  SUNXI_GPX(Z),  24  },
+			{   "GPIO7",  SUNXI_GPX(Z),  26   },
 			{
 				{   0,  0,  0}
 			},
@@ -97,8 +97,8 @@ replace XZ with the pin which is wired out on this position (e.g. PA10, PG11 etc
 */
 	{"LED",
 		{
-			{   "POWER_LED",  SUNXI_GPL(10),  1   },
-			{   "STATUS_LED",  SUNXI_GPA(17),  2   },
+			{   "POWER_LED",  SUNXI_GPX(Z),  1   },
+			{   "STATUS_LED",  SUNXI_GPX(Z),  2   },
 			{
 				{   0,  0,  0}
 			},
