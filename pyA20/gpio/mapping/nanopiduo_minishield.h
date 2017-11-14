@@ -90,8 +90,8 @@ GND					|··|	GPIO7
 */
 	{"LED",
 		{
-			{   "POWER_LED",  SUNXI_GPX(Z),  1   },
-			{   "STATUS_LED",  SUNXI_GPX(Z),  2  },
+			{   "POWER_LED",  SUNXI_GPL(10),  1   },
+			{   "STATUS_LED",  SUNXI_GPA(10),  2  },
 			{
 				{   0,  0,  0}
 			},
