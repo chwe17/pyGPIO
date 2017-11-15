@@ -6,13 +6,22 @@ import sys, shutil
 
 # Tested processor types & boards
 supported_processors = ["sun7i", "sun8i"]
-supported_boards = ["orangepizero", "orangepipcplus", "micro", "lime2", "lime", "nanopiduo"]
+supported_boards = ["orangepizero", "orangepipcplus","orangepiplus2e" ,"orangepilite" , "micro", "lime2", "lime", "nanopiduo"]
+boards_olimex = ["micro", "lime2", "lime"]
 
 try:
 	input = raw_input
 except NameError:
 	pass
 
+def print_green(text):
+	"""
+	Print text in yellow :)
+	:param text: String to be colored
+	:return: Colored text
+	"""
+
+	return '\033[0;32m' + text + '\033[0m'	
 
 def print_yellow(text):
 	"""
@@ -62,6 +71,9 @@ def print_warning_board():
 	else:
 		print ("Abort.")
 		sys.exit(1)
+		
+def print_annotation_olimex():
+	print ("Pin naming differs from other boards when using port method!")
 
 def check_processor():
 	"""
@@ -113,6 +125,14 @@ def check_board():
 			elif "orangepipcplus" in board:
 				print ("Detected board: OrangePi Pc Plus")
 				shutil.copy2('pyA20/gpio/mapping/orangepipcplus.h', 'pyA20/gpio/mapping.h')
+				
+			elif "orangepiplus2e" in board:
+				print ("Detected board: OrangePi Pc Plus")
+				shutil.copy2('pyA20/gpio/mapping/orangepiplus2e.h', 'pyA20/gpio/mapping.h')
+				
+			elif "orangepilite" in board:
+				print ("Detected board: OrangePi Pc Plus")
+				shutil.copy2('pyA20/gpio/mapping/orangepilite.h', 'pyA20/gpio/mapping.h')
 
 			#Olimex Boards
 			elif "micro" in board:
@@ -129,13 +149,30 @@ def check_board():
 			#FriendlyArm Boards
 			elif "nanopiduo" in board:
 				print ("Detected board: NanoPi Duo")
-				shutil.copy2('pyA20/gpio/mapping/nanopiduo.h', 'pyA20/gpio/mapping.h')
+				shield = input("Do you want to continue [Y/n]? ")
+				if shield == '1' or var == '[1]':				
+					shutil.copy2('pyA20/gpio/mapping/nanopiduo.h', 'pyA20/gpio/mapping.h')
+				elif shield == '2'or '[2]':
+					shutil.copy2('pyA20/gpio/mapping/nanopiduo_minishield.h', 'pyA20/gpio/mapping.h')
+				else:
+					print ("Abort.")
+					sys.exit(1)
+
+			elif "nanopineo" in board:
+				print ("Detected board: NanoPi Neo")
+				shutil.copy2('pyA20/gpio/mapping/nanopineo.h', 'pyA20/gpio/mapping.h')					
 
 			else:
 				print ("Unknown board")
 				
 			if board not in supported_boards:
 				print_warning_board()
+			
+			if board in boards_olimex:
+				print_annotation_olimex()				
+			
+			else:
+				return
 
 			return
 
