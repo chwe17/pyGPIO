@@ -54,7 +54,7 @@ pin header (26pin 'model A') looks like the following:
 GPIO2	|··|	5V
 GPIO3	|··|	GND
 GPIO4	|··|	GPIO14
-GND		|··|	GPIO15
+GND	|··|	GPIO15
 GPIO17	|··|	GPIO18
 GPIO27	|··|	GND
 GPIO22	|··|	GPIO23
@@ -62,7 +62,7 @@ GPIO22	|··|	GPIO23
 GPIO10	|··|	GND
 GPIO9	|··|	GPIO25
 GPIO11	|··|	GPIO8
-GND		|··|	GPIO7	
+GND	|··|	GPIO7	
 
 replace XZ with the pin which is wired out on this position (e.g. PA10, PG11 etc.) 
 */  
