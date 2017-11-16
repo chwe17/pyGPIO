@@ -266,26 +266,26 @@ class build_ext(_build_ext):
 
 
 modules = [
-	Extension('pyA20.gpio.gpio', sources=['pyA20/gpio/gpio_lib.c', 'pyA20/gpio/gpio.c']),
+	Extension('pyGPIO.gpio.gpio', sources=['pyGPIO/gpio/gpio_lib.c', 'pyGPIO/gpio/gpio.c']),
 
-	Extension('pyA20.i2c', sources=['pyA20/i2c/i2c_lib.c', 'pyA20/i2c/i2c.c']),
+	Extension('pyGPIO.i2c', sources=['pyGPIO/i2c/i2c_lib.c', 'pyGPIO/i2c/i2c.c']),
 
-	Extension('pyA20.spi', sources=['pyA20/spi/spi_lib.c', 'pyA20/spi/spi.c']),
+	Extension('pyGPIO.spi', sources=['pyGPIO/spi/spi_lib.c', 'pyGPIO/spi/spi.c']),
 
-	Extension('pyA20.gpio.connector', sources=['pyA20/gpio/connector/connector.c']),
+	Extension('pyGPIO.gpio.connector', sources=['pyGPIO/gpio/connector/connector.c']),
 
-	Extension('pyA20.gpio.port', sources=['pyA20/gpio/port/port.c']),
+	Extension('pyGPIO.gpio.port', sources=['pyGPIO/gpio/port/port.c']),
 
 ]
 
 setup(
-	name='pyA20',
+	name='pyGPIO',
 	version='0.2.1',
 	author='Stefan Mavrodiev',
 	author_email='support@olimex.com',
 	url='https://www.olimex.com/',
 	license='MIT',
-	packages=['pyA20', 'pyA20.gpio'],
+	packages=['pyGPIO', 'pyGPIO.gpio'],
 	description='Control GPIO, I2C and SPI',
 	long_description=open('README.txt').read() + open('CHANGES.txt').read(),
 	classifiers=['Development Status :: 3 - Alpha',
