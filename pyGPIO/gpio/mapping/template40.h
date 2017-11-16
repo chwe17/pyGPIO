@@ -54,7 +54,7 @@ pin header (40pin) looks like the following:
 GPIO2	|··|	5V
 GPIO3	|··|	GND
 GPIO4	|··|	GPIO14
-GND		|··|	GPIO15
+GND	|··|	GPIO15
 GPIO17	|··|	GPIO18
 GPIO27	|··|	GND
 GPIO22	|··|	GPIO23
@@ -62,14 +62,14 @@ GPIO22	|··|	GPIO23
 GPIO10	|··|	GND
 GPIO9	|··|	GPIO25
 GPIO11	|··|	GPIO8
-GND		|··|	GPIO7	
+GND	|··|	GPIO7	
 GPIO28*	|··|	GPIO29*
 GPIO5	|··|	GND
 GPIO6	|··|	GPIO12
 GPIO13	|··|	GND
 GPIO19	|··|	GPIO16
 GPIO26	|··|	GPIO20
-GND		|··|	GPIO21
+GND	|··|	GPIO21
 (*) on the RPi those two pins are used for official HATS (read out eeprom), since this is never depoyed 
 on SUNXI boards we can use this GPIOs too. ;)
 
