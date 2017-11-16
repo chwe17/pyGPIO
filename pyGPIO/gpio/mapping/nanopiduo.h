@@ -47,10 +47,10 @@ typedef struct _gpio {
 gpio_t gpio[] = {
 
 /*
-					J1			J2
-(UART0_RX)			|1| microUSB |1|	5V	
-(UART0_TX)			|·|	 		 |·|	5V						
-GND					|·|	 		 |·|	3.3V
+			J1		  	 J2
+(UART0_RX)		|1| microUSB |1|	 5V	
+(UART0_TX)		|·|	 		 |·|	5V						
+GND			|·|	 		 |·|	3.3V
 GPIO3 (TWI_SCL)		|·|			 |·|	GND	
 GPIO2 (TWI_SDA)		|·|			 |·| 	GPIO4 (IR_RX)
 GPIO23 (SPI1_CS)	|·|			 |·|	GPIO18 (IOG11)	
@@ -59,11 +59,11 @@ GPIO27 (SPI1_MISO)	|·|			 |·|	DM3 D+
 GPIO17 (SPI1_MOSI)	|·|			 |·|	DM2 D-	
 GPIO15(UART1_RX)	|·|			 |·|	DM2 D+
 GPIO14 (UART1_TX)	|·|			 |·|	RDN
-(CVBS)				|·|			 |·|	RDP	
-(LINEOUT_L)			|·|			 |·|	TXN
-(LINEOUT_R)			|·|			 |·|	TXP
-(MICP)				|·|			 |·|	LED-LINK
-(MICN)				|·|	microSD	 |·|	LED-SPD
+(CVBS)			|·|			 |·|	RDP	
+(LINEOUT_L)		|·|			 |·|	TXN
+(LINEOUT_R)		|·|			 |·|	TXP
+(MICP)			|·|			 |·|	LED-LINK
+(MICN)			|·|	microSD		 |·|	LED-SPD
 
 */  {"J1",
         {
