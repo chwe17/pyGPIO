@@ -70,7 +70,7 @@ pin header (26pin 'model A') looks like the following:
 			//'first row'
 			{   "PA12",  SUNXI_GPA(12),  2   },
 			{   "PA11",  SUNXI_GPA(11),  3   },
-			{   "PA6",  SUNXI_GPA(),6  4   },
+			{   "PA6",  SUNXI_GPA(6),  4   },
 			{   "PA1",  SUNXI_GPA(1),  17   },
 			{   "PA0",  SUNXI_GPA(0),  27   },
 			{   "PA3",  SUNXI_GPA(3),  22   },
