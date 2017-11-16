@@ -50,19 +50,19 @@ gpio_t gpio[] = {
 Description of Pinheader, please don't change pinnumer to keep this library consistent! A 'RPi compatible'
 pin header (26pin 'model A') looks like the following:
 
-								3.3V	|··|	5V
-(PA12, TWI0_SDA)				GPIO2	|··|	5V
-(PA11, TWI0_SCK)				GPIO3	|··|	GND
-(PA6, PMW1)						GPIO4	|··|	GPIO14	(PG6, UART1_TX)
-								GND		|··|	GPIO15	(PG7, UART1_RX)
-(PA1, UART2_RX)					GPIO17	|··|	GPIO18	(PA7)
-(PA0, UART2_TX)					GPIO27	|··|	GND
-(PA3, UART2_CTS)				GPIO22	|··|	GPIO23	(PA19, TWI1_SDA)
-								3.3V	|··|	GPIO24	(PA18, TWI1 SCK)
+				3.3V	|··|	5V
+(PA12, TWI0_SDA)		GPIO2	|··|	5V
+(PA11, TWI0_SCK)		GPIO3	|··|	GND
+(PA6, PMW1)			GPIO4	|··|	GPIO14	(PG6, UART1_TX)
+				GND	|··|	GPIO15	(PG7, UART1_RX)
+(PA1, UART2_RX)			GPIO17	|··|	GPIO18	(PA7)
+(PA0, UART2_TX)			GPIO27	|··|	GND
+(PA3, UART2_CTS)		GPIO22	|··|	GPIO23	(PA19, TWI1_SDA)
+				3.3V	|··|	GPIO24	(PA18, TWI1 SCK)
 (PA15, SPI1_MOSI, UART3_RTS)	GPIO10	|··|	GND
 (PA16, SPI1_MISO, UART3_CTS)	GPIO9	|··|	GPIO25	(PA2, UART2_RTS)
-(PA14, SPI1_CLK)				GPIO11	|··|	GPIO8	(PA13, SPI1_CS, UART3_TX)
-								GND		|··|	GPIO7	(PA10)
+(PA14, SPI1_CLK)		GPIO11	|··|	GPIO8	(PA13, SPI1_CS, UART3_TX)
+			GND		|··|	GPIO7	(PA10)
 
 */  
 	{"GPIO",
