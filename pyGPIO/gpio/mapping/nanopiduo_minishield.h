@@ -50,20 +50,20 @@ gpio_t gpio[] = {
 Description of Pinheader, please don't change pinnumer to keep this library consistent! A 'RPi compatible'
 pin header (26pin 'model A') looks like the following:
 
-3.3V				|··|	5V
+3.3V			|··|	5V
 GPIO2 	I2C0_SDA	|··|	5V
 GPIO3	I2C_SCL		|··|	GND
-GPIO4				|··|	GPIO14	UART1_TX
-GND					|··|	GPIO15	UART1_RX
+GPIO4			|··|	GPIO14	UART1_TX
+GND			|··|	GPIO15	UART1_RX
 GPIO17	SPI1_MOSI	|··|	GPIO18	
 GPIO27	SPI1_MISO	|··|	GND	
 GPIO22	SPI1_CLK	|··|	GPIO23	SPI1_CS
-3.3V				|··|	NC (on mini shield)
+3.3V			|··|	NC (on mini shield)
 ----------------------------------------------------
-GPIO10				|··|	GND		(not depoyed on mini shield)
-GPIO9				|··|	GPIO25
-GPIO11				|··|	GPIO8
-GND					|··|	GPIO7	
+GPIO10			|··|	GND		(not depoyed on mini shield)
+GPIO9			|··|	GPIO25
+GPIO11			|··|	GPIO8
+GND			|··|	GPIO7	
 
 */  
 	{"GPIO",

@@ -125,4 +125,13 @@ on SUNXI boards we can use this GPIOs too. ;)
 			},
 		}
 	},
+	
+	{"BUTTON",
+		{
+			{   "BUTTON_1",  SUNXI_GPL(4),  1   },
+			{
+				{   0,  0,  0}
+			},
+		}
+	},	
 };

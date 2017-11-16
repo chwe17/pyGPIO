@@ -1,4 +1,6 @@
-Do not use this Lib at he moment! Under development.
+The library is under development and not fully tested yet. For progress and information see:
+https://forum.armbian.com/topic/5662-pygpio-a-more-general-python-gpio-library/
+
 
 This package provide methods for controlling GPIO pins, I2C and SPI buses.
 This is written for A20-OLinuXino-MICRO, but it can be used with other boards. If you do
@@ -34,22 +36,22 @@ The available constants are:
 
 The gpio are named two ways:
 
-    By port name: PH0, PG2, PE10, etc.
+    By port name: GPIOX, GPIOY, GPIOZ, etc.
     These can be imported from port module:
 
-    >>> from pyA20.gpio import port
+    >>> from pyGPIO.gpio import port
     >>> dir(port)
 
     By connector name and pin number: gpio2p12, gpio3p8, lcdp18, uext1p3 and etc.
     These can be imported from connector module:
 
-    >>> from pyA20.gpio import connector
+    >>> from pyGPIO.gpio import connector
     >>> dir(connector)
 
 Generally these constants are just an offset in the memory from the base GPIO address, so they can
 be assigned to a number type variable.
 
-    >>> led = port.PH2
+    >>> led = port.GPIOX
     >>> print led
     226
 
@@ -83,36 +85,36 @@ GPIO::
 
     #!/usr/bin/env python
 
-    from pyA20.gpio import gpio
-    from pyA20.gpio import port
-    from pyA20.gpio import connector
+    from pyGPIO.gpio import gpio
+    from pyGPIO.gpio import port
+    from pyGPIO.gpio import connector
 
     gpio.init() #Initialize module. Always called first
 
-    gpio.setcfg(port.PG9, gpio.OUTPUT)  #Configure LED1 as output
-    gpio.setcfg(port.PG9, 1)    #This is the same as above
+    gpio.setcfg(port.GPIOX, gpio.OUTPUT)  #Configure LED1 as output
+    gpio.setcfg(port.GPIOX, 1)    #This is the same as above
 
-    gpio.setcfg(port.PE11, gpio.INPUT)   #Configure PE11 as input
-    gpio.setcfg(port.PE11, 0)   #Same as above
+    gpio.setcfg(port.GPIOY, gpio.INPUT)   #Configure GPIOY as input
+    gpio.setcfg(port.GPIOY, 0)   #Same as above
 
-    gpio.pullup(port.PE11, 0)   #Clear pullups
-    gpio.pullup(port.PE11, gpio.PULLDOWN)    #Enable pull-down
-    gpio.pullup(port.PE11, gpio.PULLUP)  #Enable pull-up
+    gpio.pullup(port.GPIOY, 0)   #Clear pullups
+    gpio.pullup(port.GPIOY, gpio.PULLDOWN)    #Enable pull-down
+    gpio.pullup(port.GPIOY, gpio.PULLUP)  #Enable pull-up
 
     while True:
-        if gpio.input(port.PE11) == 1:
-            gpio.output(port.PG9, gpio.LOW)
-            gpio.output(port.PG9, 0)
+        if gpio.input(port.GPIOY) == 1:
+            gpio.output(port.GPIOX, gpio.LOW)
+            gpio.output(port.GPIOX, 0)
         else:
-            gpio.output(port.PG9, gpio.HIGH)
-            gpio.output(port.PG9, 1)
+            gpio.output(port.GPIOX, gpio.HIGH)
+            gpio.output(port.GPIOX, 1)
 
 
 I2C::
 
     #!/usr/bin/env python
 
-    from pyA20 import i2c
+    from pyGPIO import i2c
 
     i2c.init("/dev/i2c-2")  #Initialize module to use /dev/i2c-2
     i2c.open(0x55)  #The slave device address is 0x55
@@ -132,7 +134,7 @@ SPI::
 
     #!/usr/bin/env python
 
-    from pyA20 import spi
+    from pyGPIO import spi
 
     spi.open("/dev/spidev2.0")
     #Open SPI device with default settings
