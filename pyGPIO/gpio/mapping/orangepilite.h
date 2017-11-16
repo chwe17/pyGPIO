@@ -126,6 +126,7 @@ on SUNXI boards we can use this GPIOs too. ;)
 		}
 	},
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	{"BUTTON",
 		{
@@ -136,6 +137,9 @@ on SUNXI boards we can use this GPIOs too. ;)
 		}
 	},		
 };
+=======
+};
+>>>>>>> f877cbec9f7eb78c27aef06b53c678344a37fe15
 =======
 };
 >>>>>>> f877cbec9f7eb78c27aef06b53c678344a37fe15
