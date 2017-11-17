@@ -5,7 +5,7 @@ from distutils.command.build_ext import build_ext as _build_ext
 import sys, shutil
 
 
-supported_processors = ["sun7i", "sun8i"]
+supported_processors = ["sun7i", "sun8i", "Allwinner sun8i Family"]
 
 try:
 	input = raw_input
@@ -123,7 +123,7 @@ def manual_board_assignment():
 		return
 		
 	elif var5 == '8' or var5 == '[8]':
-		var6 = input("Do you want to use your NanoPi Duo with [1] ore without minishield [2]\n(mapping & naming in connector mode is incorrect, no changes by using port)?)")
+		var6 = input("Do you want to use your NanoPi Duo with [1] or without minishield [2]\n(mapping & naming in connector mode is incorrect, no changes by using port)?)")
 		if var6 == '2' or var6 == '[2]':				
 			shutil.copy2('pyGPIO/gpio/mapping/nanopiduo.h', 'pyGPIO/gpio/mapping.h')
 		elif var6 == '1' or var6 == '[1]':
