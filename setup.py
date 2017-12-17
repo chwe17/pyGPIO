@@ -92,7 +92,8 @@ def manual_board_assignment():
 	print ("[7]  A20-OLinuXIno-LIME2")
 	print ("[8]  NanoPi Duo")
 	print ("[9]  NanoPi Neo")
-	print ("[10] Abort")
+	print ("[10] pcDuino3")
+	print ("[11] Abort")
 	var5 = input("")
 	
 	if var5 == '1' or var5 == '[1]':
@@ -137,6 +138,10 @@ def manual_board_assignment():
 		return
 		
 	elif var5 == '10' or var5 == '[10]':
+		shutil.copy2('pyGPIO/gpio/mapping/pcduino3.h', 'pyGPIO/gpio/mapping.h')
+		return
+		
+	elif var5 == '11' or var5 == '[11]':
 		print ("Abort.")
 		sys.exit(1)
 		
@@ -245,7 +250,13 @@ def check_board():
 			elif "nanopineo" == board:
 				print ("Detected board: NanoPi Neo")
 				print_correct()
-				shutil.copy2('pyGPIO/gpio/mapping/nanopineo.h', 'pyGPIO/gpio/mapping.h')					
+				shutil.copy2('pyGPIO/gpio/mapping/nanopineo.h', 'pyGPIO/gpio/mapping.h')
+
+			#LinkSprite Boards
+			elif "pcduino3" == board:
+				print ("Detected board: pcDuino3")
+				print_correct()
+				shutil.copy2('pyGPIO/gpio/mapping/pcduino3.h', 'pyGPIO/gpio/mapping.h')					
 
 			else:
 				print ("Unknown board")
