@@ -190,7 +190,7 @@ def check_board():
 	"""
 	Detect board type (added by chwe17)
 	"""
-	boardinfo = open("/etc/armbian-image-release", 'r')
+	boardinfo = open("/etc/armbian-release", 'r')
 	for line in boardinfo:
 		if "BOARD" in line:
 			board = line.split("=")[1].rstrip()
