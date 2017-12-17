@@ -126,3 +126,5 @@ replace XZ with the pin which is wired out on this position (e.g. PA10, PG11 etc
 		}
 	},
 };
+
+#endif

@@ -136,3 +136,5 @@ on SUNXI boards we can use this GPIOs too. ;)
 	},	
 	
 };
+
+#endif
