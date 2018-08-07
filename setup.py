@@ -5,7 +5,7 @@ from distutils.command.build_ext import build_ext as _build_ext
 import sys, shutil
 
 
-supported_processors = ["sun6i", "sun7i", "sun8i", "Allwinner sun8i Family"]
+supported_processors = ["sun6i", "sun7i", "sun8i", "Allwinner sun8i Family", "Allwinner sun6i (A31) Family" ]
 
 try:
 	input = raw_input
