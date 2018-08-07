@@ -5,7 +5,7 @@ from distutils.command.build_ext import build_ext as _build_ext
 import sys, shutil
 
 
-supported_processors = ["sun7i", "sun8i", "Allwinner sun8i Family"]
+supported_processors = ["sun6i", "sun7i", "sun8i", "Allwinner sun8i Family"]
 
 try:
 	input = raw_input
@@ -93,7 +93,8 @@ def manual_board_assignment():
 	print ("[8]  NanoPi Duo")
 	print ("[9]  NanoPi Neo")
 	print ("[10] pcDuino3")
-	print ("[11] Abort")
+	print ("[11] BananaPi M2")
+	print ("[12] Abort")
 	var5 = input("")
 	
 	if var5 == '1' or var5 == '[1]':
@@ -140,8 +141,12 @@ def manual_board_assignment():
 	elif var5 == '10' or var5 == '[10]':
 		shutil.copy2('pyGPIO/gpio/mapping/pcduino3.h', 'pyGPIO/gpio/mapping.h')
 		return
-		
+    
 	elif var5 == '11' or var5 == '[11]':
+		shutil.copy2('pyGPIO/gpio/mapping/bananapim2.h', 'pyGPIO/gpio/mapping.h')
+		return    
+		
+	elif var5 == '12' or var5 == '[12]':
 		print ("Abort.")
 		sys.exit(1)
 		
@@ -167,6 +172,9 @@ def check_processor():
 
 			elif "sun5i" in processor:
 				print ("Detected processor: " + print_yellow(processor) + " (Probably Allwinner A13)")
+            
+			elif "sun6i" in processor:
+				print ("Detected processor: " + print_yellow(processor) + " (Probably Allwinner A31s)")
 
 			elif "sun7i" in processor:
 				print ("Detected processor: " + print_yellow(processor) + " (Probably Allwinner A20)")
@@ -256,7 +264,13 @@ def check_board():
 			elif "pcduino3" == board:
 				print ("Detected board: pcDuino3")
 				print_correct()
-				shutil.copy2('pyGPIO/gpio/mapping/pcduino3.h', 'pyGPIO/gpio/mapping.h')					
+				shutil.copy2('pyGPIO/gpio/mapping/pcduino3.h', 'pyGPIO/gpio/mapping.h')		
+			
+			#Sinovoip Boards
+			if "bananapim2" == board:
+				print ("Detected board: " + print_green("Bananapi M2"))
+				print_correct()
+				shutil.copy2('pyGPIO/gpio/mapping/bananapim2.h', 'pyGPIO/gpio/mapping.h')
 
 			else:
 				print ("Unknown board")
