@@ -150,7 +150,11 @@ def manual_board_assignment():
 	elif var5 == '12' or var5 == '[12]':
 		shutil.copy2('pyGPIO/gpio/mapping/tritium.h', 'pyGPIO/gpio/mapping.h')
 		return
-	
+
+	elif var5 == '13' or var5 == '[13]':
+		shutil.copy2('pyGPIO/gpio/mapping/bananapim2zero.h', 'pyGPIO/gpio/mapping.h')
+		return
+
 	elif var5 == '99' or var5 == '[99]':
 		print ("Abort.")
 		sys.exit(1)
@@ -276,6 +280,11 @@ def check_board():
 				print ("Detected board: " + print_green("Bananapi M2"))
 				print_correct()
 				shutil.copy2('pyGPIO/gpio/mapping/bananapim2.h', 'pyGPIO/gpio/mapping.h')
+
+			elif "bananapim2zero" == board:
+				print ("Detected board: " + print_green("Bananapi M2 Zero"))
+				print_correct()
+				shutil.copy2('pyGPIO/gpio/mapping/bananapim2zero.h', 'pyGPIO/gpio/mapping.h')
 
 			#Libre Computer Boards
 			elif board in ("tritium-h3", "tritium-h5"):
